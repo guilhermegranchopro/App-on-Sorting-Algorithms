@@ -1,0 +1,58 @@
+object Form1: TForm1
+  Left = -9
+  Height = 1001
+  Top = -9
+  Width = 1920
+  Caption = 'Form1'
+  ClientHeight = 976
+  ClientWidth = 1920
+  DesignTimePPI = 120
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '2.0.10.0'
+  object PaintBox1: TPaintBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 976
+    Top = 0
+    Width = 1920
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ParentFont = False
+    OnPaint = PaintBox1Paint
+  end
+  object MainMenu1: TMainMenu
+    Left = 6
+    Top = 3
+    object mnFile: TMenuItem
+      Caption = 'File'
+      object mnExit: TMenuItem
+        Caption = 'Exit'
+        OnClick = mnExitClick
+      end
+    end
+    object mnSort: TMenuItem
+      Caption = 'Sort'
+      object mnShuffle: TMenuItem
+        Caption = 'Shuffle'
+        OnClick = mnShuffleClick
+      end
+      object mnBubble: TMenuItem
+        Caption = 'Bubble Sort'
+        OnClick = mnBubbleClick
+      end
+      object mnInsert: TMenuItem
+        Caption = 'Insert Sort'
+        OnClick = mnInsertClick
+      end
+      object mnSelect: TMenuItem
+        Caption = 'Select Sort'
+        OnClick = mnSelectClick
+      end
+    end
+  end
+end
